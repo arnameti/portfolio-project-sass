@@ -1,0 +1,54 @@
+.about {
+
+  &__center {
+
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__photo-box {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 2rem;
+      left: -2rem;
+      border: 3px solid var(--clr-primary-5);
+      border-radius: var(--radius);
+      z-index: -1;
+    }
+  }
+
+  &__photo {
+    max-width: 25rem;
+    max-height: 30rem;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin: 0;
+  }
+
+  &__info {
+  }
+
+  &__title {
+  }
+
+  &__underline {
+    margin-left: 0;
+  }
+
+  & p {
+  
+  }
+
+  &__btn {
+  }
+}
