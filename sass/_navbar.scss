@@ -1,0 +1,101 @@
+.navbar {
+  height: 5rem;
+  padding: 1rem;
+  background-color: var(--clr-primary-10);
+  transition: var(--transition);
+
+  &__center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  &__logobox {
+  }
+
+  &__logo {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__btn {
+    font-size: 2rem;
+    background-color: transparent;
+    border: transparent;
+    color: var(--clr-primary-5);
+    cursor: pointer;
+    display: none;
+  }
+
+  &__list {
+    justify-self: end;
+  }
+
+  &__list-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    & a:link,
+    & a:visited {
+      font-size: 1rem;
+      text-transform: capitalize;
+      font-weight: bold;
+      color: var(--clr-grey-1);
+      transition: var(--transition);
+      letter-spacing: var(--spacing);
+      transition: var(--transition);
+    }
+
+    & a:hover,
+    & a:active {
+      color: var(--clr-primary-5);
+    }
+  }
+
+  /* fixed navbar */
+  &__fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--clr-white);
+    z-index: 2;
+    box-shadow: var(--light-shadow);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar__center {
+    width: 95vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    &__list {
+      display: none;
+    }
+
+    &__center {
+      grid-template-columns: 1fr;
+    }
+
+    &__logobox {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+    }
+
+    &__btn {
+      display: grid;
+      justify-self: end;
+    }
+  }
+}
