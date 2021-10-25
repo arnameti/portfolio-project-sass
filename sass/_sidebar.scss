@@ -10,7 +10,7 @@
   display: grid;
   place-items: center;
   transition: var(--transition);
-  transform: translateX(-100%);
+  transform: translateX(-150%);
 
   &__show {
     transform: translateX(0);
