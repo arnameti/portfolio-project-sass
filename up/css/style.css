@@ -368,54 +368,38 @@ p {
 .about__underline {
   margin-left: 0; }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+@media screen and (max-width: 992px) {
+  .about__box {
+    grid-template-columns: 1fr;
+    grid-row-gap: 5rem; } }
+
+@media screen and (max-width: 478px) {
+  .about__photo-box::before {
+    display: none; } }
+
+.services__box {
   height: 100%;
-  z-index: 4;
-  background-color: var(--clr-grey-10);
-  position: absolute;
+  width: 100%;
   display: grid;
-  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(374px, 1fr));
+  column-gap: 1.5rem;
+  text-align: center; }
+
+.services__service {
+  padding: 3rem 1rem;
+  background: var(--clr-white);
   transition: var(--transition);
-  transform: translateX(-150%); }
-  .sidebar__show {
-    transform: translateX(0); }
-  .sidebar__list-item {
-    text-align: center; }
-    .sidebar__list-item:not(:last-child) {
-      margin-bottom: 1.5rem; }
-    .sidebar__list-item a:link,
-    .sidebar__list-item a:visited {
-      font-size: 2rem;
-      text-transform: capitalize;
-      color: var(--clr-grey-5);
-      transition: var(--transition); }
-    .sidebar__list-item a:hover,
-    .sidebar__list-item a:active {
-      color: var(--clr-primary-5); }
-  .sidebar__social-icons {
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 30rem;
-    justify-items: center; }
-  .sidebar__social-icon:link, .sidebar__social-icon:visited {
-    color: var(--clr-grey-5);
-    font-size: 2rem;
-    transition: var(--transition); }
-  .sidebar__social-icon:hover, .sidebar__social-icon:active {
-    color: var(--clr-primary-5); }
-  .sidebar__close-btn {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+  border-radius: var(--radius); }
+  .services__service:hover {
+    background: var(--clr-primary-5);
+    color: var(--clr-white); }
+    .services__service:hover > .underline {
+      background: var(--clr-white); }
+    .services__service:hover > p {
+      color: var(--clr-white); }
+  .services__service > i {
     font-size: 3rem;
-    background: transparent;
-    border: transparent;
-    transition: var(--transition);
-    color: red; }
-    .sidebar__close-btn:hover {
-      color: #e66b6b; }
+    margin-bottom: 2rem; }
+  .services__service > .underline {
+    width: 40px;
+    height: 3px; }

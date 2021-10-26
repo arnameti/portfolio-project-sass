@@ -1,0 +1,41 @@
+.services {
+  &__box {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(374px, 1fr));
+    column-gap: 1.5rem;
+    text-align: center; 
+  }
+
+  &__service {
+
+    padding: 3rem 1rem;
+    background: var(--clr-white);
+    transition: var(--transition);
+    border-radius: var(--radius);
+
+    &:hover {
+      background: var(--clr-primary-5);
+      color: var(--clr-white);
+
+      & > .underline {
+        background: var(--clr-white);
+      }
+
+      & > p {
+        color: var(--clr-white);
+      }
+    }
+
+    & > i {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    & > .underline {
+      width: 40px;
+      height: 3px;
+    }
+  }
+}
